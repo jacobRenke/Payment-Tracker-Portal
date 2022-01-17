@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "0EugJjQa4Vdd0X18S7OyWtE+HrMf4vN1t5eyN16SY1SSxLeroCEzcSptg2O+Nz6TvWVM5wPZ+7gl64dwsX9Vtw==",
+  "success": true,
+  "projectFilePath": "C:\\GitHub\\Payment-Tracker-Portal\\PaymentTrackerAPI\\PaymentTrackerAPI\\PaymentTrackerAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jaker\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\jaker\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\jaker\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\jaker\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\jaker\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\jaker\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
