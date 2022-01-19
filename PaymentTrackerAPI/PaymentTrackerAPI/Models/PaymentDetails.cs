@@ -9,7 +9,7 @@ namespace PaymentTrackerAPI.Models
         public int PaymentDetailsID { get; set; }
 
         [Column (TypeName ="nvarchar(100)")]
-        public string CardOwnderName { get; set; }
+        public string CardOwnerName { get; set; }
 
         [Column(TypeName = "nvarchar(16)")]
         public string CardNumber { get; set; }

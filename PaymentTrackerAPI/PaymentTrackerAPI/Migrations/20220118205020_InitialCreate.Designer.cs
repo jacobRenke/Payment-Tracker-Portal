@@ -9,7 +9,7 @@ using PaymentTrackerAPI.Models;
 namespace PaymentTrackerAPI.Migrations
 {
     [DbContext(typeof(PaymentDetailsContext))]
-    [Migration("20220118201920_InitialCreate")]
+    [Migration("20220118205020_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,7 +30,7 @@ namespace PaymentTrackerAPI.Migrations
                     b.Property<string>("CardNumber")
                         .HasColumnType("nvarchar(16)");
 
-                    b.Property<string>("CardOwnderName")
+                    b.Property<string>("CardOwnerName")
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ExpirationDate")

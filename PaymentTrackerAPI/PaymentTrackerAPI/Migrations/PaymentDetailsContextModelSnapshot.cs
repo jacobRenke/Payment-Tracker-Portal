@@ -28,7 +28,7 @@ namespace PaymentTrackerAPI.Migrations
                     b.Property<string>("CardNumber")
                         .HasColumnType("nvarchar(16)");
 
-                    b.Property<string>("CardOwnderName")
+                    b.Property<string>("CardOwnerName")
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ExpirationDate")
