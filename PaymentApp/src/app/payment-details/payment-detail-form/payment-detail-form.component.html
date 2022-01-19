@@ -11,14 +11,16 @@
         <input class="form-control form-control-lg" placeholder="16 Digit Card Number"
         name="cardNumber" #cardNumber="ngModel" [(ngModel)]="service.formData.cardNumber">
     </div>
-    <div class="form-group">
-        <label>SECURITY CODE</label>
-        <input type="password" class="form-control form-control-lg" placeholder="Security Code"
-        name="securityCode" #securityCode="ngModel" [(ngModel)]="service.formData.securityCode">
-    </div>
-    <div class="form-group">
-        <label>VALID THROUGH</label>
-        <input class="form-control form-control-lg" placeholder="MM/YY"
-        name="expirationDate" #expirationDate="ngModel" [(ngModel)]="service.formData.expirationDate">
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label>SECURITY CODE</label>
+            <input type="password" class="form-control form-control-lg" placeholder="Security Code"
+            name="securityCode" #securityCode="ngModel" [(ngModel)]="service.formData.securityCode">
+        </div>
+        <div class="form-group col-md-6">
+            <label>VALID THROUGH</label>
+            <input class="form-control form-control-lg" placeholder="MM/YY"
+            name="expirationDate" #expirationDate="ngModel" [(ngModel)]="service.formData.expirationDate">
+        </div>
     </div>
 </form>
