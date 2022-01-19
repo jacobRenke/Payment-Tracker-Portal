@@ -1,0 +1,6 @@
+SELECT TOP (1000) [PaymentDetailsID]
+		,[CardOwnerName]
+		,[CardNumber]
+		,[ExpirationDate]
+		,[SecurityCode]
+	FROM [PaymentDetailsDB].[dbo].[PaymentDetails]
