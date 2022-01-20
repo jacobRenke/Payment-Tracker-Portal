@@ -1,26 +1,33 @@
-<form>
+<form novalidate #form="ngForm" (submit)="onSubmit(form)"> <!-- This allows us to tie the form validation to the submit button-->
     <input type="hidden" name="paymentDetailID"
     [value]="service.formData.paymentDetailID" />
     <div class="form-group">
         <label>CARD OWNER NAME</label>
         <input class="form-control form-control-lg" placeholder="Full Name"
-        name="cardOwnerName" #cardOwnerName="ngModel" [(ngModel)]="service.formData.cardOwnerName">
+        name="cardOwnerName" #cardOwnerName="ngModel" [(ngModel)]="service.formData.cardOwnerName"
+        required [class.invalid]="cardOwnerName.invalid && cardOwnerName.touched"> <!-- Sets border of input box to designated color from style sheet based on invalid -->
     </div>
     <div class="form-group">
         <label>CARD NUMBER</label>
         <input class="form-control form-control-lg" placeholder="16 Digit Card Number"
-        name="cardNumber" #cardNumber="ngModel" [(ngModel)]="service.formData.cardNumber">
+        name="cardNumber" #cardNumber="ngModel" [(ngModel)]="service.formData.cardNumber"
+        required maxlength="16" minlength="16" [class.invalid]="cardNumber.invalid && cardNumber.touched">
     </div>
     <div class="row">
         <div class="form-group col-md-6">
             <label>SECURITY CODE</label>
             <input type="password" class="form-control form-control-lg" placeholder="Security Code"
-            name="securityCode" #securityCode="ngModel" [(ngModel)]="service.formData.securityCode">
+            name="securityCode" #securityCode="ngModel" [(ngModel)]="service.formData.securityCode"
+            required maxlength="3" minlength="3" [class.invalid]="securityCode.invalid && securityCode.touched">
         </div>
         <div class="form-group col-md-6">
             <label>VALID THROUGH</label>
             <input class="form-control form-control-lg" placeholder="MM/YY"
-            name="expirationDate" #expirationDate="ngModel" [(ngModel)]="service.formData.expirationDate">
+            name="expirationDate" #expirationDate="ngModel" [(ngModel)]="service.formData.expirationDate"
+            required maxlength="5" minlength="5" [class.invalid]="expirationDate.invalid && expirationDate.touched">
         </div>
+    </div>
+    <div class="form-group py-3">
+        <input class="btn btn-primary btn-lg col-md-12" type="submit" [disabled]="form.invalid" value="SUBMIT">
     </div>
 </form>
