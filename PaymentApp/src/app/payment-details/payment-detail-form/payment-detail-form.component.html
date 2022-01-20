@@ -1,4 +1,4 @@
-<form novalidate #form="ngForm" (submit)="onSubmit(form)"> <!-- This allows us to tie the form validation to the submit button-->
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)"> <!-- This allows us to tie the form validation to the submit button-->
     <input type="hidden" name="paymentDetailID"
     [value]="service.formData.paymentDetailID" />
     <div class="form-group">

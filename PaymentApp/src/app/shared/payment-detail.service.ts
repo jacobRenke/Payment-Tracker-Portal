@@ -2,19 +2,24 @@ import { Injectable } from '@angular/core';
 import { PaymentDetail } from './payment-detail.model';
 import { HttpClient } from "@angular/common/http"
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class PaymentDetailService {
 
-  constructor(private http:HttpClient) { }
-
   formData:PaymentDetail = new PaymentDetail();
   readonly baseURL = 'https://localhost:44398/api/PaymentDetails'
   list : PaymentDetail[];
 
+  constructor(private http:HttpClient) { }
+
   postPaymentDetail() {
     return this.http.post(this.baseURL, this.formData);
+  }
+
+  putPaymentDetail() {
+    return this.http.put(`${this.baseURL}/${this.formData.paymentDetailID}`, this.formData);
   }
 
   refreshList(){
@@ -22,4 +27,5 @@ export class PaymentDetailService {
     .toPromise()
     .then(res => this.list = res as PaymentDetail[]);
   }
+  
 }
